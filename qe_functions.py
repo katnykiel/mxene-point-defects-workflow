@@ -80,7 +80,7 @@ def get_qe_outputs(file):
                 sites = []
                 atoms = []
                 j=6
-                while ("End" not in lines[i+j]) and (lines[i+j]!=""):
+                while ("End" not in lines[i+j]) or (lines[i+j]!=""):
                     sites.append(np.array(lines[i+j].split()[1:]).astype(float))
                     atoms.append(lines[i+j].split()[0])
                     j=j+1
